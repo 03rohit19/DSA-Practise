@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recurssion of Reverse Array</title>
+    <script>
+      let data = [12, 23, 45, 56, 78, 89];
+      let temp;
+      function customReverse(data, start, end) {
+        console.log(data);
+        if (start <= end) {
+          temp = data[start];
+          data[start] = data[end];
+          data[end] = temp;
+          customReverse(data, start + 1, end - 1);
+        }
+      }
+      customReverse(data, 0, data.length - 1);
+    </script>
+  </head>
+  <body>
+    <h1>Recurssion of Reverse Array</h1>
+  </body>
+</html>

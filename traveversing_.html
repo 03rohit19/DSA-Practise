@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Traversing</title>
+    <script>
+      let data = [0, 12, 56, 8, 7, 6];
+      for (let i = 0; i < data.length; i++) {
+        document.write(`Array ${i} is ${data[i]} <br>`);
+      }
+
+      // want to acces a particular value from the array
+      //   let x = 3;
+      //   document.write(data[x]);
+      function getElement() {
+        let el = document.getElementById("element").value;
+        if (el < data.length && typeof data[el] === num) {
+          alert(data[el]);
+        } else {
+          alert("please enter valid input ");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="element" />
+    <button onclick="getElement()">Get element</button>
+  </body>
+</html>

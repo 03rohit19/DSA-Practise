@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Deleting</title>
+    <script>
+      function deleteEl() {
+        let data = [12, 34, 43, 23, 87];
+        let pos = document.getElementById("pos").value;
+        pos = parseInt(pos);
+        for (i = pos; i < data.length - 1; i++) {
+          data[i] = data[i + 1];
+        }
+        data.length = data.length - 1;
+        console.log(data);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="pos" placeholder="Insert position" />
+    <button onclick="deleteEl()">Delete</button>
+  </body>
+</html>

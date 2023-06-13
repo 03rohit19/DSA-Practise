@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search Element in Array</title>
+    <script>
+      function searchEl() {
+        let data = [12, 34, 67, 78, 98, 9];
+        let item = document.getElementById("search").value;
+        let index = undefined;
+        for (let i = 0; i < data.length - 1; i++) {
+          if (data[i] == parseInt(item)) {
+            index = i;
+            break;
+          }
+        }
+        console.log(index);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="search" placeholder="Search element" />
+    <button onclick="searchEl()">Search</button>
+  </body>
+</html>

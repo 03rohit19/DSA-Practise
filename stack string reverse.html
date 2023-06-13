@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reverse string with stack in javascript</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      function push(newValue) {
+        data[currentSize] = newValue;
+        currentSize += 1;
+      }
+
+      function pop() {
+        currentSize -= 1;
+        data.length = currentSize;
+      }
+      function reverse(str) {
+        console.log(str);
+      }
+      let str = "Rohit";
+      str = str.split("");
+      reverse(str);
+      console.log(str);
+    </script>
+  </head>
+  <body>
+    <h1></h1>
+  </body>
+</html>

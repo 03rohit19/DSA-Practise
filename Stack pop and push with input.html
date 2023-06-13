@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stack with input buttons</title>
+    <script>
+      let data = [];
+      let x = data.length;
+      let max = 5;
+      function push() {
+        let value = document.getElementById("newEl").value;
+        if (data.length >= max) {
+          alert("Stack is full. You cannot add further values.");
+        } else {
+          data.push(value);
+          x = x + 1;
+        }
+      }
+      function pop() {
+        if (data.length > 0) {
+          x = x - 1;
+          data.pop();
+        } else {
+          alert("Stack is empty");
+        }
+      }
+      function display() {
+        console.log(data);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Stack with input and output buttons</h1>
+    <input type="text" placeholder="Push element" id="newEl" />
+    <button onclick="push()">Add element to the stack</button>
+    <button onclick="pop()">Remove element from the stack</button>
+    <button onclick="display()">Display elements</button>
+  </body>
+</html>

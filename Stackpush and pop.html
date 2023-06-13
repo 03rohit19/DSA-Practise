@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stack array push and pull</title>
+    <script>
+      let data = [];
+      let x = data.length;
+      let max = 5;
+      function push(value) {
+        if (data.length >= max) {
+          alert("stck is full you can not add further values.");
+        }
+        data[x] = value;
+        x = x + 1;
+      }
+      function pop() {
+        if (data.length > 0) {
+          x = x - 1;
+          data.length = x;
+        } else {
+          alert("stck is empty");
+        }
+      }
+
+      push(5);
+      push(4);
+      push(6);
+      push(9);
+      push(3);
+      pop();
+      pop();
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>
