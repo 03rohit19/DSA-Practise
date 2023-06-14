@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Front and rear operations</title>
+    <script>
+      let queue = [];
+      let maxSize = 5;
+
+      function enqueue() {
+        let newValue = document.getElementById("inElement").value;
+        if (queue.length >= maxSize) {
+          alert("Queue is full");
+        } else {
+          queue.push(newValue);
+        }
+        display();
+      }
+
+      function display() {
+        console.log(queue);
+      }
+
+      function dequeue() {
+        if (queue.length > 0) {
+          queue.shift();
+        } else {
+          alert("Queue is empty");
+        }
+        display();
+      }
+
+      function getFront() {
+        if (queue.length > 0) {
+          console.log(queue[0]);
+        } else {
+          alert("Queue is empty");
+        }
+      }
+
+      function getRear() {
+        if (queue.length > 0) {
+          console.log(queue[queue.length - 1]);
+        } else {
+          alert("Queue is empty");
+        }
+      }
+
+      function isEmpty() {
+        return queue.length === 0;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Queue with input elements in JavaScript</h1>
+    <input type="text" placeholder="enter input element" id="inElement" />
+    <button onclick="enqueue()">Add element</button>
+    <button onclick="dequeue()">Remove element</button>
+    <button onclick="getFront()">Get Front</button>
+    <button onclick="getRear()">Get Rear</button>
+  </body>
+</html>
