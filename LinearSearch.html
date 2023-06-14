@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Linear search in array</title>
+    <script>
+      function searchEl() {
+        let data = [2, 3, 4, 48, 50, 59, 5];
+        let find = document.getElementById("el").value;
+        let pos = undefined;
+        for (let i = 0; i < data.length; i++) {
+          if (data[i] == find) {
+            pos = i;
+            break;
+          }
+        }
+        console.log(pos);
+        if (pos === undefined) {
+          alert("Invalid data");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Linear search in array</h1>
+    <input type="text" id="el" placeholder="Search for element" />
+    <button onclick="searchEl()">Search</button>
+  </body>
+</html>
