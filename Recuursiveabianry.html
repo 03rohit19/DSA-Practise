@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recursive binary search in array</title>
+    <script>
+      let data = [12, 34, 56, 76, 89, 90, 45];
+      let start = 0;
+      let end = data.length - 1;
+      let find = 76;
+      let position = undefined;
+
+      function recursiveBinary(data, start, end) {
+        if (start > end) {
+          return false; // Termination condition when the element is not found
+        }
+
+        let mid = Math.floor((end + start) / 2);
+        if (data[mid] === find) {
+          position = mid;
+          return true;
+        } else if (data[mid] < find) {
+          return recursiveBinary(data, mid + 1, end);
+        } else {
+          return recursiveBinary(data, start, mid - 1);
+        }
+      }
+
+      recursiveBinary(data, start, end);
+      console.log(position);
+    </script>
+  </head>
+  <body>
+    <h1>Recursive binary search</h1>
+  </body>
+</html>

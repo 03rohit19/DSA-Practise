@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Check string is palindrome or not</title>
+    <script>
+      function palindrome(data) {
+        let start = 0;
+        let end = data.length - 1;
+        while (end > start) {
+          if (data[start] !== data[end]) {
+            return false;
+          }
+          start++;
+          end--;
+        }
+        return true;
+      }
+
+      let str = "level";
+      console.log(palindrome(str));
+    </script>
+  </head>
+  <body>
+    <h1>Check string is palindrome or not</h1>
+  </body>
+</html>

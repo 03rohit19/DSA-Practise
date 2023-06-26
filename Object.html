@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Object in data structure</title>
+    <script>
+      let data = {
+        name: "Rohit",
+        age: 25,
+        gmail: "rohitfridaqy@123",
+        getName: function() {
+          return this.gmail;
+        },
+      };
+      data.contact = 1231345356;
+      //   console.log(data.getName());
+
+      for (i in data) {
+        console.log(i);
+      }
+      console.log(Object.entries(data));
+    </script>
+  </head>
+  <body>
+    <h1>'Objects in data structure'</h1>
+  </body>
+</html>

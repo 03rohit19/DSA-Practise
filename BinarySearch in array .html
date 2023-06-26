@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Binary Search in Array</title>
+    <script>
+      let data = [1, 2, 45, 54, 23, 65];
+      let find = 45;
+      let start = 0;
+      let end = data.length - 1;
+      let position = undefined;
+      while (start <= end) {
+        let mid = Math.floor((start + end) / 2); 
+        if (data[mid] === find) {
+          position = mid;
+          break;
+        } else if (data[mid] < find) {
+          start = mid + 1;
+        } else {
+          end = mid - 1;
+        }
+      }
+      console.log(position);
+    </script>
+  </head>
+  <body>
+    <h1>Binary Search in Array</h1>
+  </body>
+</html>

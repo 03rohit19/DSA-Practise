@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Building logic</title>
+    <script>
+      let data = [12, 13, 34, 57, 78, 90, 33, 45, 66, 87, 43, 44];
+      let evenArray = [];
+      let count = 0;
+      for (i = 0; i < data.length; i++) {
+        if (data[i] % 2 == 0) {
+          count++;
+          evenArray.push(data[i] * 2);
+        }
+      }
+      console.log(count);
+      console.log(evenArray);
+    </script>
+  </head>
+
+  <body>
+    <h1>
+      Find even values from array make double of those values and count the
+      values
+    </h1>
+  </body>
+</html>
